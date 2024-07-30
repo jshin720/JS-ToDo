@@ -13,10 +13,12 @@ export default class TodoForm extends Component {
   } 
 
   submitHandler = (e) => {
-    this.setState({
-        toDos: [this.state.inputValue, ...this.state.toDos],
-        inputValue: "",
-    });
+    if (this.state.inputValue !== "") {
+      this.setState({
+          toDos: [this.state.inputValue, ...this.state.toDos],
+          inputValue: "",
+      });
+    } 
   };
 
   render() {
