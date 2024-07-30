@@ -27,12 +27,12 @@ export default class TodoForm extends Component {
           placeholder="Enter Task"
           value={this.state.inputValue}
           id="newTask"
-          onChange={(e) => this.setState({ inputValue: e.target.value })}
+          onChange={this.inputChangeHandler}
         />
-        <button type="button">add task</button>
+        <button type="button"  onClick={this.submitHandler}>add task</button>
         <ol>
-            {this.state.toDos.map((todo) => (
-                <li>{todo}</li>
+            {this.state.toDos.map((todo, i) => (
+                <li key={i}>{todo}</li>
             )
             )}
         </ol>
