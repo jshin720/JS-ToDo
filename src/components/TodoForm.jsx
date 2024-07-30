@@ -1,6 +1,6 @@
 import React, { Component } from "react";
 
-export default class form extends Component {
+export default class TodoForm extends Component {
   state = {
     inputValue: "",
     toDos: []

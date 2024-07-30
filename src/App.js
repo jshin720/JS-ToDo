@@ -1,10 +1,11 @@
 import logo from './logo.svg';
 import './App.css';
+import TodoForm from "./components/TodoForm"
 
 function App() {
   return (
     <div className="App">
-      <i className="fas fa-h1"></i>
+      <TodoForm/>
     </div>
   );
 }
