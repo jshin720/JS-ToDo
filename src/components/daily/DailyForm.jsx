@@ -1,9 +1,17 @@
-import React from 'react';
+import React, { useState } from "react";
 
 export default function DailyForm() {
-  return (
-    <div>
-      
-    </div>
-  );
+  const [days, setDays] = useState([
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+    "Sunday",
+  ]);
+
+
+
+  return <div></div>;
 }

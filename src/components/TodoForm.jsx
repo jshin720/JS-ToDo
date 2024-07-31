@@ -42,3 +42,18 @@ export default class TodoForm extends Component {
     );
   }
 }
+
+
+import React, { useState } from 'react';
+
+export default function TodoForm() {
+  const [day, setDay] = useState("")
+  const [inputValue, setInputValue] = useState('');
+  const [toDos, setToDos] = useState([]);
+
+  return (
+    <div>
+      
+    </div>
+  );
+}
