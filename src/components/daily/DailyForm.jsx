@@ -11,6 +11,8 @@ export default function DailyForm() {
     "Sunday",
   ]);
 
+  const [week, setWeek] = useState([]);
+
 
 
   return <div></div>;

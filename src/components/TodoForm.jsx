@@ -53,7 +53,20 @@ export default function TodoForm() {
 
   return (
     <div>
-      
+      <input
+          type="text"
+          placeholder="Enter Task"
+          value={this.state.inputValue}
+          id="newTask"
+          onChange={this.inputChangeHandler}
+        />
+        <button type="button"  onClick={this.submitHandler}>add task</button>
+        <ol>
+            {this.state.toDos.map((todo, i) => (
+                <li key={i}>{todo}</li>
+            )
+            )}
+        </ol>
     </div>
   );
 }
