@@ -1,55 +1,24 @@
-import React, { Component } from "react";
-
-export default class TodoForm extends Component {
-  state = {
-    inputValue: "",
-    toDos: []
-  };
-
-  inputChangeHandler = (e) => {
-    this.setState({
-      inputValue: e.target.value
-    });
-  } 
-
-  submitHandler = (e) => {
-    if (this.state.inputValue !== "") {
-      this.setState({
-          toDos: [this.state.inputValue, ...this.state.toDos],
-          inputValue: "",
-      });
-    } 
-  };
-
-  render() {
-    return (
-      <div>
-        <input
-          type="text"
-          placeholder="Enter Task"
-          value={this.state.inputValue}
-          id="newTask"
-          onChange={this.inputChangeHandler}
-        />
-        <button type="button"  onClick={this.submitHandler}>add task</button>
-        <ol>
-            {this.state.toDos.map((todo, i) => (
-                <li key={i}>{todo}</li>
-            )
-            )}
-        </ol>
-      </div>
-    );
-  }
-}
-
-
 import React, { useState } from 'react';
 
 export default function TodoForm() {
   const [day, setDay] = useState("")
   const [inputValue, setInputValue] = useState('');
   const [toDos, setToDos] = useState([]);
+
+  const inputChangeHandler = (e) => {
+    setInputValue(e.target.value);
+  } 
+
+  const submitHandler = (e) => {
+    console.log(e)
+    // if (this.state.inputValue !== "") {
+    //   this.setState({
+    //       toDos: [this.state.inputValue, ...this.state.toDos],
+    //       inputValue: "",
+    //   });
+    // } 
+  };
+
 
   return (
     <div>
