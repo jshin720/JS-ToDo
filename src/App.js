@@ -1,6 +1,6 @@
 import logo from './logo.svg';
 import './App.css';
-import TodoForm from "./components/TodoForm"
+import TodoForm from "./components/todoForm/TodoForm"
 
 function App() {
   return (
