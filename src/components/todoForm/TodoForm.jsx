@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 
 export default function TodoForm() {
-  // const [day, setDay] = useState('');
+  const [selectedDay, setSelectedDay] = useState('');
   const [inputValue, setInputValue] = useState("");
   const [toDos, setToDos] = useState([]);
 
@@ -15,9 +15,15 @@ export default function TodoForm() {
     "Sunday",
   ];
 
-  const inputChangeHandler = (e) => {
+  const inputTaskHandler = (e) => {
+    console.log(e.target, "change")
+   
     setInputValue(e.target.value);
   };
+
+  const inputDayHandler = (e) => {
+     setSelectedDay(e.target.value);
+  }
 
   const submitHandler = (e) => {
     console.log(e);
@@ -33,7 +39,7 @@ export default function TodoForm() {
     <div>
       {days.map((day, i) => (
         <>
-         <input type="checkbox" value={day} name={day}/>
+         <input type="radio" value={selectedDay} name={day} onClick={inputDayHandler}/>
          <label> {day} </label>
         </>
       ))}
@@ -42,7 +48,7 @@ export default function TodoForm() {
         placeholder="Enter Task"
         value={inputValue}
         id="newTask"
-        onChange={inputChangeHandler}
+        onChange={inputTaskHandler}
       />
       <button type="button" onClick={submitHandler}>
         add task
