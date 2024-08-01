@@ -39,7 +39,7 @@ export default function TodoForm() {
     <div>
       {days.map((day, i) => (
         <>
-         <input type="radio" value={selectedDay} name={day} onClick={inputDayHandler}/>
+         <input type="radio" value={selectedDay} name={day} onChange={(e) => setSelectedDay(e.target.value)}/>
          <label> {day} </label>
         </>
       ))}
@@ -48,7 +48,7 @@ export default function TodoForm() {
         placeholder="Enter Task"
         value={inputValue}
         id="newTask"
-        onChange={inputTaskHandler}
+        onChange={(e) => setInputValue(e.target.value)}
       />
       <button type="button" onClick={submitHandler}>
         add task
