@@ -22,11 +22,11 @@ export default function TodoForm() {
     console.log(selectedDay)
     console.log(inputValue);
     if (inputValue !== "") {
-      setState({
-          toDos: [this.state.inputValue, ...this.state.toDos],
-          inputValue: "",
-      });
-    }
+          toDos.push(inputValue, ...toDos)
+          inputValue = "";
+          selectedDay = "";
+      };
+    
   };
 
   return (
