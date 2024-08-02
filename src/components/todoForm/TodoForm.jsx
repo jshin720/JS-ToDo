@@ -1,10 +1,8 @@
 import React, { useState } from "react";
 
-
-
 export default function TodoForm() {
-  const [selectedDay, setSelectedDay] = useState('');
-  const [inputValue, setInputValue] = useState('');
+  const [selectedDay, setSelectedDay] = useState("");
+  const [inputValue, setInputValue] = useState("");
   const [toDos, setToDos] = useState([]);
 
   const days = [
@@ -17,23 +15,27 @@ export default function TodoForm() {
     "Sunday",
   ];
 
-  
-  const submitHandler = (e) => {
-    console.log(e);
-    if (inputValue !== "") {
-      setState({
-          toDos: [this.state.inputValue, ...this.state.toDos],
-          inputValue: "",
-      });
-    }
+  const changeHandler = (e) => {
+    console.log(e.target.value);
+    // if (inputValue !== "") {
+    //   setState({
+    //       toDos: [this.state.inputValue, ...this.state.toDos],
+    //       inputValue: "",
+    //   });
+    // }
   };
 
   return (
     <div>
       {days.map((day, i) => (
         <>
-         <input type="radio" value={selectedDay} name={day} onChange={(e) => setSelectedDay(e.target.value)}/>
-         <label> {day} </label>
+          <input
+            type="radio"
+            value={selectedDay}
+            name={day}
+            onChange={changeHandler}
+          />
+          <label> {day} </label>
         </>
       ))}
       <input
@@ -41,9 +43,9 @@ export default function TodoForm() {
         placeholder="Enter Task"
         value={inputValue}
         id="newTask"
-        onChange={(e) => setInputValue(e.target.value)}
+        onChange={changeHandler}
       />
-      <button type="button" onClick={submitHandler}>
+      <button type="submit" >
         add task
       </button>
       <ol>
