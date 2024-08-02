@@ -1,8 +1,10 @@
 import React, { useState } from "react";
 
+
+
 export default function TodoForm() {
   const [selectedDay, setSelectedDay] = useState('');
-  const [inputValue, setInputValue] = useState("");
+  const [inputValue, setInputValue] = useState('');
   const [toDos, setToDos] = useState([]);
 
   const days = [
@@ -15,24 +17,15 @@ export default function TodoForm() {
     "Sunday",
   ];
 
-  const inputTaskHandler = (e) => {
-    console.log(e.target, "change")
-   
-    setInputValue(e.target.value);
-  };
-
-  const inputDayHandler = (e) => {
-     setSelectedDay(e.target.value);
-  }
-
+  
   const submitHandler = (e) => {
     console.log(e);
-    // if (this.state.inputValue !== "") {
-    //   this.setState({
-    //       toDos: [this.state.inputValue, ...this.state.toDos],
-    //       inputValue: "",
-    //   });
-    // }
+    if (inputValue !== "") {
+      setState({
+          toDos: [this.state.inputValue, ...this.state.toDos],
+          inputValue: "",
+      });
+    }
   };
 
   return (
