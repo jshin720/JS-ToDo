@@ -1,6 +1,6 @@
 import React from 'react';
 
-export default function WeeklyForm() {
+export default function Weekly() {
   return (
     <div>
       
