@@ -5,7 +5,8 @@ export default function monthly() {
   const [year, setYear] = useState(new Date().getFullYear());
     
   const [days, setDays] = useState([]);
-  const [day, setDay] = useState(1);
+  const [dayOfWeek, setDayOfWeek] = useState(0);
+  
 
   return (
     <div>
