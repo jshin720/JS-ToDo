@@ -18,6 +18,7 @@ export default function TodoForm() {
   ];
   const handleDayChange = (event) => {
     setSelectedDay(event.target.value);
+  }
   
   const submitHandler = (e) => {
     console.log(selectedDay)
