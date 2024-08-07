@@ -16,9 +16,14 @@ export default function TodoForm() {
     "Saturday",
     "Sunday",
   ];
+
+
   const handleDayChange = (event) => {
     setSelectedDay(event.target.value);
+
   }
+
+
   
   const submitHandler = (e) => {
     console.log(selectedDay)
@@ -30,6 +35,7 @@ export default function TodoForm() {
       };
     
   };
+
 
 
 

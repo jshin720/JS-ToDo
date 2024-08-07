@@ -16,6 +16,9 @@ export default function Weekly() {
     const [day, setDay] = useState('');
     const [tasks, setTasks] = useState([]);
     const [days, setDays] = useState([]);
+
+    
+
   return (
     <div>
       
