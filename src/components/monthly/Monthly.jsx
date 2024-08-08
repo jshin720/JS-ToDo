@@ -10,9 +10,7 @@ export default function monthly() {
   const [dayOfMonth, setDayOfMonth] = useState(0);
   const [dayOfWeekName, setDayOfWeekName] = useState("");
   const [dayOfWeekNumber, setDayOfWeekNumber] = useState(0);
-  const [dayOfWeekNumberName, setDayOfWeekNumberName] = useState("");
-
-  const [dayOfWeekNumberNameShort, setDayOfWeekNumberNameShort] = useState("");
+;
 
 
   return (
