@@ -21,6 +21,7 @@ export default function Weekly() {
 
   return (
     <div>
+      <h1>Weekly Tasks</h1>
       
     </div>
   );
