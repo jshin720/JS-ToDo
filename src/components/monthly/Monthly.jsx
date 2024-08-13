@@ -9,8 +9,6 @@ export default function monthly() {
   const [dayOfMonth, setDayOfMonth] = useState(0);
 
   
-  
-  const [dayOfMonth, setDayOfMonth] = useState(0);
 
   return (
     <div>
