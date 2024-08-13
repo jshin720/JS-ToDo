@@ -6,6 +6,7 @@ export default function monthly() {
 
   const [days, setDays] = useState([]);
   const [dayOfWeek, setDayOfWeek] = useState(0);
+  const [dayOfMonth, setDayOfMonth] = useState(0);
 
   
   
