@@ -6,6 +6,7 @@ export default function TodoForm() {
   const [inputValue, setInputValue] = useState('');
   const [toDos, setToDos] = useState([]);
   const [isEditing, setIsEditing] = useState(false);
+  const [editId, setEditId] = useState(null);
   const days = [
     "Monday",
     "Tuesday",
