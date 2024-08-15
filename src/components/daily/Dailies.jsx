@@ -15,6 +15,7 @@ export default function DailyForm() {
   const [day, setDay] = useState("");
   const [task, setTask] = useState("");
   const [time, setTime] = useState("");
+  const [priority, setPriority] = useState("");
 
  
 
