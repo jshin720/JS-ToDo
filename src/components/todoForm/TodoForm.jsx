@@ -34,8 +34,8 @@ export default function TodoForm() {
           toDos.push(inputValue, ...toDos)
           inputValue = "";
           selectedDay = "";
-      };
-    
+        };
+    e.preventDefault();
 
   };
 
