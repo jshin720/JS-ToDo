@@ -22,7 +22,6 @@ export default function TodoForm() {
   const handleDayChange = (event) => {
     setSelectedDay(event.target.value);
 
-
   }
 
   
@@ -36,7 +35,8 @@ export default function TodoForm() {
           selectedDay = "";
         };
     e.preventDefault();
-
+    
+      
   };
 
 
